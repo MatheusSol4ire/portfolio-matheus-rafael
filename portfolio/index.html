@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Matheus Rafael</title>
+
+  <!-- Fontes: Merriweather (títulos) + Nunito (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ==============================
+       NAVBAR — fixa no topo
+       ============================== -->
+  <header id="navbar">
+    <nav class="nav-container">
+
+      <!-- Nome como logo -->
+      <a href="#sobre" class="nav-logo">MR<span class="logo-dot">.</span></a>
+
+      <!-- Botão hamburguer (mobile) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Links de navegação por âncora -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre"     class="nav-link">Sobre mim</a></li>
+        <li><a href="#formacao"  class="nav-link">Formação</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+        <li><a href="#contato"   class="nav-link">Contato</a></li>
+
+        <!-- Botão alternar tema claro / escuro -->
+        <li>
+          <button class="btn-tema" id="btnTema" aria-label="Alternar tema">
+            <span id="icone-tema">☀</span>
+          </button>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==============================
+         HERO — apresentação inicial
+         ============================== -->
+    <section class="hero" id="hero">
+      <div class="hero-conteudo">
+        <p class="hero-ola">Olá, me chamo</p>
+        <h1 class="hero-nome">Matheus Rafael<br /><em>de Oliveira Cardoso</em></h1>
+        <p class="hero-cargo">Estudante de Ciência de Dados · Em transição de carreira</p>
+        <a href="#sobre" class="hero-btn">Saiba mais ↓</a>
+      </div>
+
+      <!-- Círculos decorativos de fundo (só CSS) -->
+      <div class="hero-fundo" aria-hidden="true">
+        <div class="circulo c1"></div>
+        <div class="circulo c2"></div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SEÇÃO 1 — SOBRE MIM
+         ============================== -->
+    <section id="sobre" class="secao">
+      <div class="container">
+
+        <!-- Cabeçalho da seção -->
+        <div class="secao-header">
+          <span class="secao-num">01</span>
+          <h2 class="secao-titulo">Sobre mim</h2>
+        </div>
+
+        <div class="sobre-grid">
+
+          <!-- Foto -->
+          <div class="sobre-foto">
+            <div class="moldura-foto">
+              <img src="assets/foto.jpg" alt="Foto de Matheus Rafael" id="img-foto" />
+              <div class="foto-placeholder" id="foto-placeholder">MR</div>
+            </div>
+          </div>
+
+          <!-- Texto de apresentação -->
+          <div class="sobre-texto">
+            <p class="sobre-intro">
+              Tenho 23 anos, sou de São Paulo e estou em transição de carreira da área
+              da <strong>Saúde</strong> para a <strong>Tecnologia</strong>. Trabalhei
+              por anos como Auxiliar de Enfermagem e hoje estudo
+              <strong>Ciência de Dados</strong> para construir uma nova trajetória
+              profissional.
+            </p>
+            <p>
+              Acredito que a experiência que trouxe da saúde — atenção aos detalhes,
+              trabalho sob pressão e foco no ser humano — me torna um profissional
+              mais completo também na tecnologia.
+            </p>
+
+            <!-- Dados pessoais rápidos -->
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Cidade</span>
+                <span class="info-valor">São Paulo – SP</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">E-mail</span>
+                <span class="info-valor">matheus.rafaelskse@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Área atual</span>
+                <span class="info-valor">Ciência de Dados</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Disponível para</span>
+                <span class="info-valor">Estágio / Trainee</span>
+              </div>
+            </div>
+
+            <!-- Interesses / hobbies -->
+            <div class="hobbies">
+              <h3>Interesses</h3>
+              <div class="tags">
+                <span class="tag">Dados</span>
+                <span class="tag">Saúde</span>
+                <span class="tag">Tecnologia</span>
+                <span class="tag">Leitura</span>
+                <span class="tag">Filmes</span>
+              </div>
+            </div>
+          </div><!-- /sobre-texto -->
+
+        </div><!-- /sobre-grid -->
+      </div>
+    </section>
+
+    <!-- ==============================
+         SEÇÃO 2 — FORMAÇÃO
+         ============================== -->
+    <section id="formacao" class="secao secao-alt">
+      <div class="container">
+
+        <div class="secao-header">
+          <span class="secao-num">02</span>
+          <h2 class="secao-titulo">Formação</h2>
+        </div>
+
+        <!-- Timeline de formação -->
+        <h3 class="sub-titulo">Educação</h3>
+        <div class="timeline">
+
+          <!-- Item: Ciência de Dados -->
+          <div class="tl-item">
+            <div class="tl-ponto"></div>
+            <div class="tl-conteudo">
+              <span class="tl-periodo">2025 – Cursando</span>
+              <h4 class="tl-titulo">Ciência de Dados</h4>
+              <p class="tl-local">Graduação em andamento</p>
+              <p>Aprendendo fundamentos de análise de dados, programação em Python,
+                 estatística e visualização de dados.</p>
+            </div>
+          </div>
+
+          <!-- Item: Técnico em Enfermagem -->
+          <div class="tl-item">
+            <div class="tl-ponto"></div>
+            <div class="tl-conteudo">
+              <span class="tl-periodo">2021 – 2023</span>
+              <h4 class="tl-titulo">Técnico em Enfermagem</h4>
+              <p class="tl-local">Curso Técnico</p>
+              <p>Formação técnica completa na área da saúde,
+                 com estágio supervisionado em ambiente hospitalar.</p>
+            </div>
+          </div>
+
+          <!-- Item: Auxiliar de Enfermagem -->
+          <div class="tl-item">
+            <div class="tl-ponto"></div>
+            <div class="tl-conteudo">
+              <span class="tl-periodo">2021 – 2023</span>
+              <h4 class="tl-titulo">Auxiliar de Enfermagem</h4>
+              <p class="tl-local">Curso Auxiliar</p>
+              <p>Habilitação como Auxiliar de Enfermagem,
+                 base para atuação clínica e hospitalar.</p>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+
+        <!-- Experiência profissional -->
+        <h3 class="sub-titulo" style="margin-top: 3rem;">Experiência Profissional</h3>
+        <div class="timeline">
+
+          <!-- Emprego atual: GGO Crowe -->
+          <div class="tl-item">
+            <div class="tl-ponto tl-ponto-ativo"></div>
+            <div class="tl-conteudo">
+              <span class="tl-periodo">2025 – Atual</span>
+              <h4 class="tl-titulo">Auxiliar de GGO</h4>
+              <p class="tl-local">Crowe</p>
+              <p>Atuação em Governança, Gestão e Operações,
+                 contribuindo com processos administrativos e suporte à equipe.</p>
+            </div>
+          </div>
+
+          <!-- Emprego anterior: Auxiliar de Enfermagem -->
+          <div class="tl-item">
+            <div class="tl-ponto"></div>
+            <div class="tl-conteudo">
+              <span class="tl-periodo">2023 – 2025</span>
+              <h4 class="tl-titulo">Auxiliar de Enfermagem</h4>
+              <p class="tl-local">Área Hospitalar</p>
+              <p>Assistência a pacientes, administração de medicamentos,
+                 monitoramento de sinais vitais e apoio à equipe de enfermagem.</p>
+            </div>
+          </div>
+
+        </div><!-- /timeline experiência -->
+
+        <!-- Idiomas -->
+        <h3 class="sub-titulo" style="margin-top: 3rem;">Idiomas</h3>
+        <div class="idiomas">
+
+          <div class="idioma-item">
+            <div class="idioma-info">
+              <span class="idioma-nome">Português</span>
+              <span class="idioma-nivel">Nativo</span>
+            </div>
+            <!-- Largura da barra definida inline; fácil de editar -->
+            <div class="barra-fundo"><div class="barra-fill" style="width: 100%"></div></div>
+          </div>
+
+          <div class="idioma-item">
+            <div class="idioma-info">
+              <span class="idioma-nome">Inglês</span>
+              <span class="idioma-nivel">Básico</span>
+            </div>
+            <div class="barra-fundo"><div class="barra-fill" style="width: 25%"></div></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         SEÇÃO 3 — PORTFÓLIO
+         ============================== -->
+    <section id="portfolio" class="secao">
+      <div class="container">
+
+        <div class="secao-header">
+          <span class="secao-num">03</span>
+          <h2 class="secao-titulo">Portfólio</h2>
+        </div>
+
+        <!-- Mensagem "Em breve" — será substituída por projetos reais -->
+        <div class="portfolio-em-breve">
+          <div class="em-breve-icone">🚀</div>
+          <h3>Projetos em desenvolvimento</h3>
+          <p>
+            Estou no início da minha jornada em Ciência de Dados e
+            desenvolvimento web. Em breve publicarei aqui os projetos
+            que estou construindo durante minha formação.
+          </p>
+          <p class="em-breve-sub">
+            Volte em breve para acompanhar minha evolução!
+          </p>
+        </div>
+
+        <!-- Cards placeholder para mostrar o que virá -->
+        <div class="projetos-grid">
+
+          <div class="projeto-card projeto-placeholder">
+            <div class="projeto-topo">
+              <span class="projeto-emoji">📊</span>
+            </div>
+            <div class="projeto-corpo">
+              <span class="badge-breve">Em breve</span>
+              <h4>Análise de Dados com Python</h4>
+              <p>Projeto de análise exploratória de dados em desenvolvimento.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="projeto-card projeto-placeholder">
+            <div class="projeto-topo">
+              <span class="projeto-emoji">🌐</span>
+            </div>
+            <div class="projeto-corpo">
+              <span class="badge-breve">Em breve</span>
+              <h4>Este Portfólio</h4>
+              <p>Site pessoal desenvolvido com HTML5, CSS3 e JavaScript.</p>
+              <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         SEÇÃO 4 — CONTATO
+         ============================== -->
+    <section id="contato" class="secao secao-alt">
+      <div class="container">
+
+        <div class="secao-header">
+          <span class="secao-num">04</span>
+          <h2 class="secao-titulo">Contato</h2>
+          <p class="secao-sub">Quer conversar? Preencha o formulário abaixo!</p>
+        </div>
+
+        <div class="contato-grid">
+
+          <!-- Informações de contato direto -->
+          <div class="contato-info">
+            <div class="contato-item">
+              <span class="contato-icone">✉</span>
+              <div>
+                <strong>E-mail</strong>
+                <p>matheus.rafaelskse@gmail.com</p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <span class="contato-icone">💼</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <p>https://www.linkedin.com/in/matheus-rafael-b47412358/</p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <span class="contato-icone">🐱</span>
+              <div>
+                <strong>GitHub</strong>
+                <p>em breve</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário com validação em JavaScript -->
+          <form id="formulario-contato" class="formulario" novalidate>
+
+            <!-- Campo: Nome -->
+            <div class="campo-grupo">
+              <label for="nome">Nome *</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+              />
+              <!-- Erro exibido via JavaScript -->
+              <span class="campo-erro" id="erro-nome"></span>
+            </div>
+
+            <!-- Campo: E-mail -->
+            <div class="campo-grupo">
+              <label for="email">E-mail *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seuemail@email.com"
+                autocomplete="email"
+              />
+              <span class="campo-erro" id="erro-email"></span>
+            </div>
+
+            <!-- Campo: Mensagem -->
+            <div class="campo-grupo">
+              <label for="mensagem">Mensagem *</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                placeholder="Escreva sua mensagem aqui..."
+              ></textarea>
+              <span class="campo-erro" id="erro-mensagem"></span>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar mensagem →</button>
+
+            <!-- Mensagem de sucesso — exibida via JS após envio simulado -->
+            <div class="msg-sucesso" id="msg-sucesso" role="alert">
+              ✓ Mensagem enviada com sucesso! Entrarei em contato em breve.
+            </div>
+
+          </form>
+
+        </div><!-- /contato-grid -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       RODAPÉ
+       ============================== -->
+  <footer class="rodape">
+    <div class="container">
+      <p>© <span id="ano-atual"></span> Matheus Rafael de Oliveira Cardoso</p>
+      <p class="rodape-sub">Desenvolvido com HTML5, CSS3 e JavaScript puro</p>
+    </div>
+  </footer>
+
+  <!-- Script carregado ao final para não travar o carregamento da página -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
