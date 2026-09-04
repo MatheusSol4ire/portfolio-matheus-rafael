@@ -14,9 +14,7 @@
 </head>
 <body class="dark-theme">
 
-  <!-- ==============================
-       NAVBAR — fixa no topo
-       ============================== -->
+  <!-- Navbar fixa no topo -->
   <header id="navbar">
     <nav class="nav-container">
 
@@ -50,9 +48,7 @@
 
   <main>
 
-    <!-- ==============================
-         HERO — apresentação inicial
-         ============================== -->
+    <!-- Hero: apresentação inicial -->
     <section class="hero" id="hero">
       <div class="hero-conteudo">
         <p class="hero-ola">Olá, me chamo</p>
@@ -61,16 +57,14 @@
         <a href="#sobre" class="hero-btn">Saiba mais ↓</a>
       </div>
 
-      <!-- Círculos decorativos de fundo (só CSS) -->
+      <!-- Círculos decorativos de fundo -->
       <div class="hero-fundo" aria-hidden="true">
         <div class="circulo c1"></div>
         <div class="circulo c2"></div>
       </div>
     </section>
 
-    <!-- ==============================
-         SEÇÃO 1 — SOBRE MIM
-         ============================== -->
+    <!-- Seção: Sobre mim -->
     <section id="sobre" class="secao">
       <div class="container">
 
@@ -142,9 +136,7 @@
       </div>
     </section>
 
-    <!-- ==============================
-         SEÇÃO 2 — FORMAÇÃO
-         ============================== -->
+    <!-- Seção: Formação -->
     <section id="formacao" class="secao secao-alt">
       <div class="container">
 
@@ -234,7 +226,7 @@
               <span class="idioma-nome">Português</span>
               <span class="idioma-nivel">Nativo</span>
             </div>
-            <!-- Largura da barra definida inline; fácil de editar -->
+            <!-- Largura da barra definida inline -->
             <div class="barra-fundo"><div class="barra-fill" style="width: 100%"></div></div>
           </div>
 
@@ -251,9 +243,7 @@
       </div>
     </section>
 
-    <!-- ==============================
-         SEÇÃO 3 — PORTFÓLIO
-         ============================== -->
+    <!-- Seção: Portfólio -->
     <section id="portfolio" class="secao">
       <div class="container">
 
@@ -262,50 +252,65 @@
           <h2 class="secao-titulo">Portfólio</h2>
         </div>
 
-        <!-- Mensagem "Em breve" — será substituída por projetos reais -->
-        <div class="portfolio-em-breve">
-          <div class="em-breve-icone">🚀</div>
-          <h3>Projetos em desenvolvimento</h3>
-          <p>
-            Estou no início da minha jornada em Ciência de Dados e
-            desenvolvimento web. Em breve publicarei aqui os projetos
-            que estou construindo durante minha formação.
-          </p>
-          <p class="em-breve-sub">
-            Volte em breve para acompanhar minha evolução!
-          </p>
-        </div>
-
-        <!-- Cards placeholder para mostrar o que virá -->
+        <!-- Cards de projetos -->
         <div class="projetos-grid">
 
-          <div class="projeto-card projeto-placeholder">
+          <div class="projeto-card">
             <div class="projeto-topo">
-              <span class="projeto-emoji">📊</span>
+              <span class="projeto-emoji">🩺</span>
             </div>
             <div class="projeto-corpo">
-              <span class="badge-breve">Em breve</span>
-              <h4>Análise de Dados com Python</h4>
-              <p>Projeto de análise exploratória de dados em desenvolvimento.</p>
+              <h4>Casa de Idosos — Controle de Medicação</h4>
+              <p>
+                Aplicação web para registro de residentes, medicamentos e
+                horários de administração em uma instituição de acolhimento
+                de idosos. Feita como projeto de extensão da faculdade.
+              </p>
               <div class="tags">
                 <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
+                <span class="tag">Flask</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">SQLAlchemy</span>
+              </div>
+              <div class="projeto-links">
+                <a
+                  href="https://github.com/MatheusSol4ire/casa-idosos"
+                  class="projeto-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Ver no GitHub</a>
               </div>
             </div>
           </div>
 
-          <div class="projeto-card projeto-placeholder">
+          <div class="projeto-card">
             <div class="projeto-topo">
               <span class="projeto-emoji">🌐</span>
             </div>
             <div class="projeto-corpo">
-              <span class="badge-breve">Em breve</span>
-              <h4>Este Portfólio</h4>
-              <p>Site pessoal desenvolvido com HTML5, CSS3 e JavaScript.</p>
+              <h4>Portfólio Pessoal</h4>
+              <p>
+                Este site, feito do zero em HTML, CSS e JavaScript,
+                com tema claro/escuro e layout responsivo.
+              </p>
               <div class="tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
                 <span class="tag">JavaScript</span>
+              </div>
+              <div class="projeto-links">
+                <a
+                  href="https://matheussol4ire.github.io/portfolio-matheus-rafael/"
+                  class="projeto-link projeto-link--principal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Ver site</a>
+                <a
+                  href="https://github.com/MatheusSol4ire/portfolio-matheus-rafael"
+                  class="projeto-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Ver no GitHub</a>
               </div>
             </div>
           </div>
@@ -315,9 +320,7 @@
       </div>
     </section>
 
-    <!-- ==============================
-         SEÇÃO 4 — CONTATO
-         ============================== -->
+    <!-- Seção: Contato -->
     <section id="contato" class="secao secao-alt">
       <div class="container">
 
@@ -354,7 +357,7 @@
             </div>
           </div>
 
-          <!-- Formulário com validação em JavaScript -->
+          <!-- Formulário de contato -->
           <form id="formulario-contato" class="formulario" novalidate>
 
             <!-- Campo: Nome -->
@@ -367,7 +370,7 @@
                 placeholder="Seu nome completo"
                 autocomplete="name"
               />
-              <!-- Erro exibido via JavaScript -->
+              <!-- Erro do campo -->
               <span class="campo-erro" id="erro-nome"></span>
             </div>
 
@@ -398,7 +401,7 @@
 
             <button type="submit" class="btn-enviar">Enviar mensagem →</button>
 
-            <!-- Mensagem de sucesso — exibida via JS após envio simulado -->
+            <!-- Mensagem de sucesso -->
             <div class="msg-sucesso" id="msg-sucesso" role="alert">
               ✓ Mensagem enviada com sucesso! Entrarei em contato em breve.
             </div>
@@ -411,9 +414,7 @@
 
   </main>
 
-  <!-- ==============================
-       RODAPÉ
-       ============================== -->
+  <!-- Rodapé -->
   <footer class="rodape">
     <div class="container">
       <p>© <span id="ano-atual"></span> Matheus Rafael de Oliveira Cardoso</p>
@@ -421,7 +422,7 @@
     </div>
   </footer>
 
-  <!-- Script carregado ao final para não travar o carregamento da página -->
+  <!-- Script carregado ao final -->
   <script src="js/main.js"></script>
 
 </body>
