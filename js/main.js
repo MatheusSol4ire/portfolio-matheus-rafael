@@ -152,7 +152,10 @@ var erroNome     = document.getElementById('erro-nome');
 var erroEmail    = document.getElementById('erro-email');
 var erroMensagem = document.getElementById('erro-mensagem');
 var msgSucesso   = document.getElementById('msg-sucesso');
-var btnEnviar    = document.querySelector('.btn-enviar');
+var timerAviso   = null;
+
+// E-mail que recebe as mensagens do formulário
+var EMAIL_CONTATO = 'matheus.rafaelskse@gmail.com';
 
 // Valida formato de e-mail
 function emailValido(email) {
@@ -214,27 +217,26 @@ formulario.addEventListener('submit', function(evento) {
   // Só continua se a validação passar
   if (!validarFormulario()) return;
 
-  // Desabilita o botão
-  btnEnviar.disabled = true;
-  btnEnviar.textContent = 'Enviando...';
+  // Monta um e-mail pronto (mailto) — sem servidor, abre o app de e-mail do visitante
+  var nome     = campoNome.value.trim();
+  var email    = campoEmail.value.trim();
+  var mensagem = campoMensagem.value.trim();
 
-  // Simula o tempo de envio (1,5 segundos)
-  setTimeout(function() {
-    // Limpa todos os campos
-    formulario.reset();
+  var assunto = 'Contato pelo portfólio - ' + nome;
+  var corpo   = mensagem + '\n\n---\n' + nome + '\n' + email;
 
-    // Restaura o botão
-    btnEnviar.disabled = false;
-    btnEnviar.textContent = 'Enviar mensagem →';
+  window.location.href = 'mailto:' + EMAIL_CONTATO +
+    '?subject=' + encodeURIComponent(assunto) +
+    '&body='    + encodeURIComponent(corpo);
 
-    // Exibe a mensagem de sucesso
-    msgSucesso.style.display = 'block';
+  // Campos NÃO são limpos: se o app de e-mail não abrir, o texto não se perde
+  msgSucesso.style.display = 'block';
 
-    // Oculta a mensagem após 5 segundos
-    setTimeout(function() {
-      msgSucesso.style.display = 'none';
-    }, 5000);
-  }, 1500);
+  // Oculta o aviso após 8 segundos (reinicia se enviar de novo)
+  clearTimeout(timerAviso);
+  timerAviso = setTimeout(function() {
+    msgSucesso.style.display = 'none';
+  }, 8000);
 });
 
 
