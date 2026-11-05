@@ -14,15 +14,35 @@ function aplicarTema(tema) {
   iconeTema.textContent = (tema === 'dark-theme') ? '☀' : '☾';
 }
 
+// Lê o tema salvo. O localStorage pode estar bloqueado (cookies/dados
+// de sites desativados) e lançar erro — sem o try/catch o script inteiro parava
+function lerTemaSalvo() {
+  try {
+    var tema = localStorage.getItem('tema');
+    // Só aceita valores conhecidos
+    if (tema === 'dark-theme' || tema === 'light-theme') return tema;
+  } catch (e) {
+    // Sem acesso ao armazenamento: usa o padrão
+  }
+  return 'dark-theme';
+}
+
+function salvarTema(tema) {
+  try {
+    localStorage.setItem('tema', tema);
+  } catch (e) {
+    // Sem acesso ao armazenamento: o tema vale só nesta visita
+  }
+}
+
 // Tema salvo (padrão: escuro)
-var temaSalvo = localStorage.getItem('tema') || 'dark-theme';
-aplicarTema(temaSalvo);
+aplicarTema(lerTemaSalvo());
 
 // Alterna tema ao clicar
 btnTema.addEventListener('click', function() {
   var novoTema = body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
   aplicarTema(novoTema);
-  localStorage.setItem('tema', novoTema);
+  salvarTema(novoTema);
 });
 
 
