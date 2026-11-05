@@ -1,0 +1,41 @@
+# ============================================================
+# .gitignore — Portfólio (GitHub Pages)
+#
+# O site publicado depende APENAS de:
+#   index.html · css/ · js/ · assets/
+# Nada abaixo deve tocar nesses arquivos.
+# ============================================================
+
+# --- Ferramentas de IA / grafo de conhecimento (uso local) ---
+# graphify-out/ contém caminhos da máquina e um graph.html que
+# ficaria público no GitHub Pages se fosse versionado.
+graphify-out/
+.claude/
+CLAUDE.md
+# Só configura o merge do graphify-out/graph.json (que é ignorado)
+.gitattributes
+
+# --- Sistema operacional ---
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# --- Editores / IDEs ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Logs e temporários ---
+*.log
+*.tmp
+*.bak
+
+# --- Dependências e builds (caso venham a existir) ---
+node_modules/
+dist/
+.env
+.env.*
