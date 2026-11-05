@@ -126,19 +126,30 @@ elementosAnimados.forEach(function(el) {
 var imgFoto       = document.getElementById('img-foto');
 var fotoPlacehold = document.getElementById('foto-placeholder');
 
+function mostrarFoto() {
+  imgFoto.style.display = 'block';
+  if (fotoPlacehold) fotoPlacehold.style.display = 'none';
+}
+
+function mostrarPlaceholder() {
+  imgFoto.style.display = 'none';
+  if (fotoPlacehold) fotoPlacehold.style.display = 'flex';
+}
+
 // Foto ou placeholder
 if (imgFoto) {
-  imgFoto.addEventListener('load', function() {
-    // Exibe a foto
-    imgFoto.style.display = 'block';
-    fotoPlacehold.style.display = 'none';
-  });
+  imgFoto.addEventListener('load', mostrarFoto);
+  imgFoto.addEventListener('error', mostrarPlaceholder);
 
-  imgFoto.addEventListener('error', function() {
-    // Mantém o placeholder
-    imgFoto.style.display = 'none';
-    fotoPlacehold.style.display = 'flex';
-  });
+  // A imagem pode já ter carregado (ex.: veio do cache) antes deste script
+  // rodar — nesse caso o evento 'load' já passou e precisa ser tratado aqui
+  if (imgFoto.complete) {
+    if (imgFoto.naturalWidth > 0) {
+      mostrarFoto();
+    } else {
+      mostrarPlaceholder();
+    }
+  }
 }
 
 
